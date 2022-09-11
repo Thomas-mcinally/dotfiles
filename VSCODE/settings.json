@@ -1,0 +1,8 @@
+{
+    "explorer.confirmDelete": false,
+    "python.linting.enabled": false,
+    "python.defaultInterpreterPath": "~.pyenv/versions/3.10.4/bin/python",
+    "workbench.startupEditor": "none",
+    "testExplorer.errorDecoration": false,
+    "files.autoSave": "afterDelay"
+}
