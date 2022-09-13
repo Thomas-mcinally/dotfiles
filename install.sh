@@ -22,11 +22,12 @@ pyenv global 3.10.4
 # Download oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# create symlink for vscode dotfiles
+# create symlinks
 ln -s /Users/thomas.mcinally/dotfiles/VSCODE/settings.json /Users/thomas.mcinally/Library/Application\ Support/Code/User/settings.json
 ln -s /Users/thomas.mcinally/dotfiles/VSCODE/keybindings.json /Users/thomas.mcinally/Library/Application\ Support/Code/User/keybindings.json
 ln -s /Users/thomas.mcinally/dotfiles/VSCODE/snippets/ /Users/thomas.mcinally/Library/Application\ Support/Code/User
 ln -s /Users/thomas.mcinally/dotfiles/.zprofile /Users/thomas.mcinally/.zprofile
+ln -s /Users/thomas.mcinally/dotfiles/.gitconfig /Users/thomas.mcinally/.gitconfig
 
 # install vscode extensions
 extensions = (
