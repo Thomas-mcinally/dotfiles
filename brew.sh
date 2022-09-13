@@ -20,7 +20,7 @@ CASKS=(
 for app in "${CASKS[@]}"
 do
    echo "brew install $app on your MacOS."
-   brew install --cask $app &>/dev/null
+   brew install --cask $app
 done
 
 # Install Brew Packages
