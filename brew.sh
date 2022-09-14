@@ -28,4 +28,7 @@ brew install pyenv
 brew install pipenv
 brew install terraform
 brew install docker-compose
+brew install npm
+brew install nvm
+brew install yarn
 
