@@ -22,11 +22,13 @@ pyenv global 3.10.4
 # Download oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# create symlinks
-ln -s /Users/thomas.mcinally/dotfiles/VSCODE/settings.json /Users/thomas.mcinally/Library/Application\ Support/Code/User/settings.json
-ln -s /Users/thomas.mcinally/dotfiles/VSCODE/keybindings.json /Users/thomas.mcinally/Library/Application\ Support/Code/User/keybindings.json
-ln -s /Users/thomas.mcinally/dotfiles/VSCODE/snippets/ /Users/thomas.mcinally/Library/Application\ Support/Code/User
+# create symlinks for dotfiles in homedirectory
 ln -s /Users/thomas.mcinally/dotfiles/.gitconfig /Users/thomas.mcinally/.gitconfig
+
+#create symlinks for VSCCODE
+#not sure if vscode install comes with settings.json and keybindings.json. If they do, need to delete the default files before making these symlinks
+ln -s /Users/thomas.mcinally/dotfiles/VSCODE/settings.json /Users/thomas.mcinally/Library/Application\ Support/Code/User/settings.json 
+ln -s /Users/thomas.mcinally/dotfiles/VSCODE/keybindings.json /Users/thomas.mcinally/Library/Application\ Support/Code/User/keybindings.json
 
 # install vscode extensions
 extensions = (
