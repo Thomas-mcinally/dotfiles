@@ -47,12 +47,12 @@ do
 done
 
 files="gitconfig zshrc"
-# create symlinks (will overwrite old dotfiles)
+# create symlinks to dotfiles (will overwrite old dotfiles)
 for file in ${files}; do
     echo "Creating symlink to $file in home directory."
     ln -sf ${dotfiledir}/.${file} ${homedir}/.${file}
 done
 
-#create symlinks for VSCCODE
+#create symlinks for VSCCODE settings files (will overwrite existing ones)
 ln -sf ${dotfiledir}/VSCODE/settings.json ${homedir}/Library/Application\ Support/Code/User/settings.json 
 ln -sf ${dotfiledir}/VSCODE/keybindings.json ${homedir}/Library/Application\ Support/Code/User/keybindings.json
