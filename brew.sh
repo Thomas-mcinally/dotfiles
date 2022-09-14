@@ -14,7 +14,7 @@ CASKS=(
     onedrive,
     docker,
     postico,
-    postgres-unofficial,
+    postgres-unofficial
 )
 
 for app in "${CASKS[@]}"
