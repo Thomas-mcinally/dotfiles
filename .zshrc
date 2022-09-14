@@ -1,3 +1,4 @@
+alias portfolio="~/Documents/Terminal-finance/portfolio.sh"
 # OH-MY-ZSH configuration
 #path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
