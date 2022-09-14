@@ -10,6 +10,10 @@ if [ "$#" -ne 1 ]; then
 fi
 
 homedir=$1
+dotfiledir=${homedir}/dotfiles
+
+# Download oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Run the Homebrew Script
 ./brew.sh
@@ -18,17 +22,6 @@ homedir=$1
 pyenv install 2.7.18
 pyenv install 3.10.4
 pyenv global 3.10.4
-
-# Download oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# create symlinks for dotfiles in homedirectory
-ln -s /Users/thomas.mcinally/dotfiles/.gitconfig /Users/thomas.mcinally/.gitconfig
-
-#create symlinks for VSCCODE
-#not sure if vscode install comes with settings.json and keybindings.json. If they do, need to delete the default files before making these symlinks
-ln -s /Users/thomas.mcinally/dotfiles/VSCODE/settings.json /Users/thomas.mcinally/Library/Application\ Support/Code/User/settings.json 
-ln -s /Users/thomas.mcinally/dotfiles/VSCODE/keybindings.json /Users/thomas.mcinally/Library/Application\ Support/Code/User/keybindings.json
 
 # install vscode extensions
 extensions = (
@@ -50,3 +43,13 @@ do
     code --install-extension $extension
 done
 
+files="gitconfig zshrc"
+# create symlinks (will overwrite old dotfiles)
+for file in ${files}; do
+    echo "Creating symlink to $file in home directory."
+    ln -sf ${dotfiledir}/.${file} ${homedir}/.${file}
+done
+
+#create symlinks for VSCCODE
+ln -sf ${dotfiledir}/VSCODE/settings.json ${homedir}/Library/Application\ Support/Code/User/settings.json 
+ln -sf ${dotfiledir}/VSCODE/keybindings.json ${homedir}/Library/Application\ Support/Code/User/keybindings.json
