@@ -30,19 +30,16 @@ ln -s /Users/thomas.mcinally/dotfiles/.gitconfig /Users/thomas.mcinally/.gitconf
 
 # install vscode extensions
 extensions = (
-    hashicorp.terraform
-    hbenl.vscode-test-explorer
-    littlefoxteam.vscode-python-test-adapter
-    matangover.mypy
-    mhutchie.git-graph
-    ms-azuretools.vscode-docker
-    ms-python.python
-    ms-python.vscode-pylance
-    ms-toolsai.jupyter
-    ms-toolsai.jupyter-keymap
-    ms-toolsai.jupyter-renderers
-    ms-vscode.test-adapter-converter
-    oderwat.indent-rainbow
+    hashicorp.terraform,
+    hbenl.vscode-test-explorer,
+    littlefoxteam.vscode-python-test-adapter,
+    matangover.mypy,
+    mhutchie.git-graph,
+    ms-azuretools.vscode-docker,
+    ms-python.python,
+    ms-python.vscode-pylance,
+    ms-vscode.test-adapter-converter,
+    oderwat.indent-rainbow,
     ritwickdey.LiveServer
 )
 
