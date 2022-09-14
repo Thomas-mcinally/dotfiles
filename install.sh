@@ -18,6 +18,9 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # Run the Homebrew Script
 ./brew.sh
 
+# set up directory for nvm
+mkdir ${homedir}/.nvm
+
 # install python versions
 pyenv install 2.7.18
 pyenv install 3.10.4
