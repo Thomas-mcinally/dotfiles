@@ -15,7 +15,8 @@ CASKS=(
     docker,
     postico,
     postgres-unofficial,
-    zoom
+    zoom,
+    postman
 )
 
 for app in "${CASKS[@]}"
