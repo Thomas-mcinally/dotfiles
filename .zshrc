@@ -1,6 +1,3 @@
-alias portfolio="~/Documents/Terminal-finance/portfolio.sh"
-alias info="~/Documents/Terminal-finance/stock_overview.sh"
-
 # OH-MY-ZSH configuration
 #path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -17,3 +14,5 @@ eval "$(pyenv init -)"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+alias info=/Users/thomas.mcinally/Documents/Terminal-finance/stock_overview.sh
+alias portfolio=/Users/thomas.mcinally/Documents/Terminal-finance/portfolio.sh

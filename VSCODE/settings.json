@@ -4,5 +4,8 @@
     "python.defaultInterpreterPath": "~.pyenv/versions/3.10.4/bin/python",
     "workbench.startupEditor": "none",
     "testExplorer.errorDecoration": false,
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
