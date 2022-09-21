@@ -33,4 +33,5 @@ brew install docker-compose
 brew install npm
 brew install nvm
 brew install yarn
-
+brew install awscli
+brew install pre-commit
