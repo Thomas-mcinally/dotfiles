@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Install MacOS Applications
+# Install brew casks (MacOS applications)
 CASKS=(
     google-chrome,
     visual-studio-code,
@@ -19,19 +19,26 @@ CASKS=(
     postman
 )
 
-for app in "${CASKS[@]}"
+for cask in "${CASKS[@]}"
 do
-   echo "brew install $app on your MacOS."
-   brew install --cask $app
+   echo "brew install $cask MacOS app"
+   brew install --cask $cask
 done
 
-# Install Brew Packages
-brew install pyenv
-brew install pipenv
-brew install terraform
-brew install docker-compose
-brew install npm
-brew install nvm
-brew install yarn
-brew install awscli
-brew install pre-commit
+# Install brew formulae (cli tools)
+FORMULAE=(
+    pyenv,
+    pipenv,
+    terraform,
+    docker-compose,
+    npm,
+    nvm,
+    yarn,
+    awscli,
+    pre-commit
+)
+for formulae in "${CASKS[@]}"
+do
+   echo "brew install $formulae cli tool"
+   brew install $formulae
+done
