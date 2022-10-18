@@ -16,3 +16,4 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 alias info=/Users/thomas.mcinally/Documents/Terminal-finance/stock_overview.sh
 alias portfolio=/Users/thomas.mcinally/Documents/Terminal-finance/portfolio.sh
+alias check-pr-size="git diff --shortstat main | awk -v OFS=, '\$5 ~ /^insertion/ && \$7 ~ /^deletion/ {printf \" Total: %d\n Inserted: %d\n Deleted: %d\n\", \$4,  \$6, \$4 + \$6}'"
