@@ -11,5 +11,9 @@
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.confirmSync": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "[python]": {
+    }
 }
