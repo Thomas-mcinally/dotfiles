@@ -14,6 +14,12 @@ eval "$(pyenv init -)"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-alias info=/Users/thomas.mcinally/Documents/Terminal-finance/stock_overview.sh
-alias portfolio=/Users/thomas.mcinally/Documents/Terminal-finance/portfolio.sh
 alias check-pr-size="git diff --shortstat main | awk -v OFS=, '\$5 ~ /^insertion/ && \$7 ~ /^deletion/ {printf \" Total: %d\n Inserted: %d\n Deleted: %d\n\", \$4,  \$6, \$4 + \$6}'"export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
+
+# Created by `pipx` on 2023-03-08 13:42:50
+export PATH="$PATH:/Users/thomas.mcinally/.local/bin"
