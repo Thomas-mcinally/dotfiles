@@ -16,7 +16,9 @@ CASKS=(
     postico,
     postgres-unofficial,
     zoom,
-    postman
+    postman,
+    maccy,
+    tree
 )
 
 for cask in "${CASKS[@]}"
