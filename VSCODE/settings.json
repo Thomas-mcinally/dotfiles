@@ -24,5 +24,12 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.minimap.enabled": false,
-    "window.zoomLevel": -1
+    "editor.inlineSuggest.enabled": true,
+    "debug.onTaskErrors": "showErrors",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
 }
