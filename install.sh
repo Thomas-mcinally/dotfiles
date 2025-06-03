@@ -4,16 +4,16 @@
 # And also installs Homebrew Packages
 ############################
 
-if [ "$#" -ne 1 ]; then
-    echo "Usage: install.sh <home_directory>"
+if [ "$#" -ne 2 ]; then
+    echo "Usage: install.sh <home_directory> <dotfile_directory>"
     exit 1
 fi
 
 homedir=$1
-dotfiledir=${homedir}/dotfiles
+dotfiledir=$2
 
 # Download oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+RUNZSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Run the Homebrew Script
 ./brew.sh
@@ -27,17 +27,17 @@ pyenv install 3.10.4
 pyenv global 3.10.4
 
 # install vscode extensions
-extensions = (
-    hashicorp.terraform,
-    hbenl.vscode-test-explorer,
-    littlefoxteam.vscode-python-test-adapter,
-    matangover.mypy,
-    mhutchie.git-graph,
-    ms-azuretools.vscode-docker,
-    ms-python.python,
-    ms-python.vscode-pylance,
-    ms-vscode.test-adapter-converter,
-    oderwat.indent-rainbow,
+extensions=(
+    hashicorp.terraform
+    hbenl.vscode-test-explorer
+    littlefoxteam.vscode-python-test-adapter
+    matangover.mypy
+    mhutchie.git-graph
+    ms-azuretools.vscode-docker
+    ms-python.python
+    ms-python.vscode-pylance
+    ms-vscode.test-adapter-converter
+    oderwat.indent-rainbow
     ritwickdey.LiveServer
 )
 
@@ -46,13 +46,9 @@ do
     code --install-extension $extension
 done
 
-files="gitconfig zshrc"
-# create symlinks to dotfiles (will overwrite old dotfiles)
-for file in ${files}; do
-    echo "Creating symlink to $file in home directory."
-    ln -sf ${dotfiledir}/.${file} ${homedir}/.${file}
-done
 
-#create symlinks for VSCCODE settings files (will overwrite existing ones)
+# create symlinks
+ln -sf ${dotfiledir}/.zshrc ${homedir}/.zshrc
+ln -sf ${dotfiledir}/.gitconfig ${homedir}/.gitconfig
 ln -sf ${dotfiledir}/VSCODE/settings.json ${homedir}/Library/Application\ Support/Code/User/settings.json 
 ln -sf ${dotfiledir}/VSCODE/keybindings.json ${homedir}/Library/Application\ Support/Code/User/keybindings.json

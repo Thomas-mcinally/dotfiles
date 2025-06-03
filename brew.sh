@@ -2,22 +2,22 @@
 
 # Install brew casks (MacOS applications)
 CASKS=(
-    google-chrome,
-    visual-studio-code,
-    slack,
-    rectangle,
-    microsoft-outlook,
-    microsoft-powerpoint,
-    microsoft-excel,
-    microsoft-word,
-    microsoft-teams,
-    onedrive,
-    docker,
-    postico,
-    postgres-unofficial,
-    zoom,
-    postman,
-    maccy,
+    google-chrome
+    visual-studio-code
+    slack
+    rectangle
+    microsoft-outlook
+    microsoft-powerpoint
+    microsoft-excel
+    microsoft-word
+    microsoft-teams
+    onedrive
+    rancher
+    postico
+    postgres-unofficial
+    zoom
+    postman
+    maccy
     tree
 )
 
@@ -29,17 +29,16 @@ done
 
 # Install brew formulae (cli tools)
 FORMULAE=(
-    pyenv,
-    pipenv,
-    terraform,
-    docker-compose,
-    npm,
-    nvm,
-    yarn,
-    awscli,
-    pre-commit
+    pyenv
+    pipenv
+    terraform
+    docker-compose
+    npm
+    nvm
+    yarn
+    awscli
 )
-for formulae in "${CASKS[@]}"
+for formulae in "${FORMULAE[@]}"
 do
    echo "brew install $formulae cli tool"
    brew install $formulae
